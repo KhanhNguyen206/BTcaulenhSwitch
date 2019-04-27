@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BTcaulenhSwitch</title>
+</head>
+<body>
+<form>
+    <legend>Ứng dụng tính số ngày trong một tháng </legend>
+    <fieldset>
+        <input type="text" id="vaora">
+        <br>
+        <br>
+        <input type="button" onclick="tinhtoan()" value="Tính số ngày">
+    </fieldset>
+
+</form>
+<script>
+    function tinhtoan() {
+        let thang = parseInt(document.getElementById("vaora").value);
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("vaora").value = "31";
+                break;
+            case  2:
+                document.getElementById("vaora").value = "28";
+                break;
+            case  4:
+            case  6:
+            case  9:
+            case 11:
+                document.getElementById("vaora").value = "30";
+                break;
+            default:
+                document.getElementById("vaora").value = "Làm gì có cái tháng này";
+                break;
+        }
+
+    }
+</script>
+</body>
+</html>
